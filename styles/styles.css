@@ -92,6 +92,19 @@ nav a {
   height: 24px;
 }
 
+header .container {
+  position: relative;
+}
+
+header img {
+  width: 796px;
+  height: 609px;
+  display: flex;
+  position: absolute;
+  top: 138px;
+  left: 545px;
+}
+
 /* HERO */
 
 .hero {
@@ -110,6 +123,7 @@ nav a {
 
 .hero p {
   font-family: 'Red Hat Display', sans-serif;
+  color: #555555;
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
@@ -121,6 +135,7 @@ nav a {
   width: 326px;
   height: 48px;
   margin-bottom: 60px;
+  border: 0;
 }
 
 .hero .container {
@@ -129,8 +144,12 @@ nav a {
 
 form button {
   position: absolute;
-  left: 295px;
-  top: 300px;
+  width: 32px;
+  height: 32px;
+  left: 305px;
+  top: 304px;
+  padding: 0;
+  border: 0;
   background-color: var(--block-color);
 }
 
@@ -149,8 +168,8 @@ form button {
 }
 
 .hero li svg {
-  width: 72px;
-  height: 138px;
+  width: 60px;
+  height: 100px;
 }
 
 .hero ul {
@@ -160,11 +179,15 @@ form button {
 
 .hero li > button {
   background-color: #f9f6f5;
+  padding: 0;
+  border: 0;
+  width: 74px;
+  height: 138px;
 }
 
 #search {
-  width: 32px;
-  height: 32px;
+  width: 20px;
+  height: 20px;
   fill: white;
 }
 
