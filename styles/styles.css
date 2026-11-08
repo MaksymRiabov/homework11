@@ -1,6 +1,11 @@
 :root {
+  --main-font: 'Red Hat Display', sans-serif;
   --medium-color: #222222;
   --block-color: #331c03;
+  --hero-backgroung: #f9f6f5;
+  --hero-paragraph: #555555;
+  --hero-button-color: #f9f6f5;
+  --placeholder-color: #999999;
 }
 
 h1,
@@ -20,12 +25,8 @@ a {
   text-decoration: none;
 }
 
-img {
-  display: block;
-}
-
 body {
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: var(--main-font);
 }
 
 /* HEADER */
@@ -34,12 +35,6 @@ header {
   position: absolute;
   width: 100%;
 }
-
-/* header a:hover,
-header a:focus {
-  color: royalblue;
-  transition: color 0.5s linear;
-} */
 
 .container {
   width: 1280px;
@@ -82,6 +77,14 @@ nav a {
   line-height: 1.25;
 }
 
+button.button-left {
+  padding: 49px 8px 49px 24px;
+}
+
+button.button-right {
+  padding: 49px 24px 49px 8px;
+}
+
 .external-links {
   display: flex;
   gap: 24px;
@@ -96,49 +99,54 @@ header .container {
   position: relative;
 }
 
-header img {
-  width: 796px;
-  height: 609px;
-  display: flex;
-  position: absolute;
-  top: 138px;
-  left: 545px;
-}
-
 /* HERO */
 
 .hero {
   padding-top: 138px;
-  background-color: #f9f6f5;
+  padding-bottom: 40px;
+  background-color: var(--hero-backgroung);
+  background-image: url(../images/cosmetic-background.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
 }
 
 .hero h1 {
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: var(--main-font);
   font-weight: 500;
   font-size: 56px;
-  line-height: 70px;
+  line-height: 1.25;
   width: 621px;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .hero p {
-  font-family: 'Red Hat Display', sans-serif;
-  color: #555555;
+  font-family: var(--main-font);
+  color: var(--hero-paragraph);
   font-weight: 400;
   font-size: 20px;
-  line-height: 32px;
+  line-height: 1.6;
   width: 516px;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .hero input {
   width: 326px;
   height: 48px;
-  margin-bottom: 60px;
+  padding-left: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   border: 0;
 }
 
-.hero .container {
+.hero input::placeholder {
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--placeholder-color);
+}
+
+.hero form {
+  margin-bottom: 60px;
   position: relative;
 }
 
@@ -146,30 +154,28 @@ form button {
   position: absolute;
   width: 32px;
   height: 32px;
-  left: 305px;
-  top: 304px;
+  left: 286px;
+  top: 8px;
   padding: 0;
   border: 0;
   background-color: var(--block-color);
 }
 
 .hero a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 148px;
   height: 56px;
+  padding: 16px 32px;
   background-color: var(--block-color);
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: var(--main-font);
   font-weight: 500;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 1.34;
   color: white;
 }
 
 .hero li svg {
-  width: 60px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
 }
 
 .hero ul {
@@ -178,11 +184,8 @@ form button {
 }
 
 .hero li > button {
-  background-color: #f9f6f5;
-  padding: 0;
+  background-color: var(--hero-button-color);
   border: 0;
-  width: 74px;
-  height: 138px;
 }
 
 #search {
