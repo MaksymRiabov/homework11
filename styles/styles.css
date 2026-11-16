@@ -182,12 +182,12 @@ form button {
 .hero ul {
   display: flex;
   justify-content: center;
+  margin-top: -15px;
 }
 
 .hero li > button {
   background-color: var(--hero-button-color);
   border: 0;
-  margin-top: -20px;
 }
 
 #search {
